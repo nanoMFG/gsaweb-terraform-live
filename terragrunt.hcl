@@ -12,3 +12,14 @@ remote_state {
     dynamodb_table = "gsaweb-tf-state-lock"
   }
 }
+
+generate "provider" {
+  path      = "provider.tf"
+  if_exists = "overwrite"
+  contents = <<EOF
+provider "aws" {
+  region              = "us-east-2"
+  version             = ">= 4.0.0"
+}
+EOF
+}
