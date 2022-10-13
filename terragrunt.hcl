@@ -17,9 +17,16 @@ generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite"
   contents = <<EOF
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
 provider "aws" {
-  region              = "us-east-2"
-  version             = ">= 4.0.0"
+  region  = "us-east-2"
 }
 EOF
 }
