@@ -37,7 +37,7 @@ The top-level `terragrunt.hcl` defines a both a [terragrunt-managed remote state
 ### Provisioning the Environments
 The above Directory structure is designed to allow `terragrunt run-all` to be run for each environment. For example:  
 ```
-> cd gsweb/development
+> cd gsaweb/development
 > terragrun run-all init
 ...
 ```
