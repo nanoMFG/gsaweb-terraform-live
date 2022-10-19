@@ -4,6 +4,7 @@ Terragrunt live code for running infrastructure deployments.
 ### Notes
 * This repo, while somewhat reusable is currently hardcoded in some places for `gsaweb` and is explicitly associated with the [gsaweb-terrafrom](https://github.com/nanoMFG/gsaweb-terraform) modules repository.
 
+### Layout
 The directory structure is:  
 `<project name>/<project env>/<module>`, eg: `gsaweb/production/server`   
 Each of these directories should contain a `terragrunt.hcl` file that configures a specific Terraform module (eg "server") for that project/environment.  
