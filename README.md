@@ -1,5 +1,8 @@
 # gsaweb-terraform-live
-Terragrunt live code for running infrastructure deployments.
+Terragrunt live code for running infrastructure deployments.  
+
+### Notes
+* This repo, while somewhat reusable is currently hardcoded in some places for `gsaweb` and is explicitly associated with the [gsaweb-terrafrom](https://github.com/nanoMFG/gsaweb-terraform) modules repository.
 
 The directory structure is:  
 `<project name>/<project env>/<module>`, eg: `gsaweb/production/server`   
@@ -14,7 +17,7 @@ Each of these directories should contain a `terragrunt.hcl` file that configures
 │       ├── server
 │   
 ```
-Based on Terragrunt's DRY programming for infrastructure [key features](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/#key-features).
+...based on Terragrunt's DRY programming for infrastructure [key features](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/#key-features).
 
 ### Remote State Configuration(s)
 The top-level `terragrunt.hcl` defines a both a [terragrunt-managed remote state](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/#keep-your-backend-configuration-dry) and a [common provider definition](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/#keep-your-provider-configuration-dry).
