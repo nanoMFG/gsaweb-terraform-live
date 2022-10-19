@@ -7,15 +7,20 @@ Terragrunt live code for running infrastructure deployments.
 ### Layout
 The directory structure is:  
 `<project name>/<project env>/<module>`, eg: `gsaweb/production/server`   
-Each of these directories should contain a `terragrunt.hcl` file that configures a specific Terraform module (eg "server") for that project/environment.  
+Each of these subdirectories should contain a `terragrunt.hcl` file that configures a specific Terraform module(from anywhere @ some version) (eg "server" ) for that project/environment.  The sub directory names become in effect, local names for the remote terrafrom modules to be configured.  
 ```
+├── terragrunt.hcl
 ├── gsaweb  
 │   ├── production
 │       ├── server
+│           ├── terragrunt.hcl
 │       ├── database
+│           ├── terragrunt.hcl
 │       ├── keystore
+│           ├── terragrunt.hcl
 │   ├── development
 │       ├── server
+│           ├── terragrunt.hcl
 │   
 ```
 ...based on Terragrunt's DRY programming for infrastructure [key features](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/#key-features).
